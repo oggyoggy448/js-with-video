@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>js learning</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        /* blur function blur the video */
+        .blur {
+        -webkit-filter: blur(3px);
+        -moz-filter: blur(3px);
+        -o-filter: blur(3px);
+        -ms-filter: blur(3px);
+        filter: blur(3px);
+        }
+        /* brightness method is going to brightness the video */
+        .brightness {
+        -webkit-filter: brightness(5);
+        -moz-filter: brightness(5);
+        -o-filter: brightness(5);
+        -ms-filter: brightness(5);
+        filter: brightness(5);
+        }
+        /* constrast method is going to contrast the video */
+        .contrast {
+        -webkit-filter: contrast(8);
+        -moz-filter: contrast(8);
+        -o-filter: contrast(8);
+        -ms-filter: contrast(8);
+        filter: contrast(8);
+        }
+        /* hui-rotate is another filter */
+        .hue-rotate {
+        -webkit-filter: hue-rotate(90deg);
+        -moz-filter: hue-rotate(90deg);
+        -o-filter: hue-rotate(90deg);
+        -ms-filter: hue-rotate(90deg);
+        filter: hue-rotate(90deg);
+        }
+        /* it is gonna to apply the hue filter in form of rotate at 180 degree */
+        .hue-rotate2 {
+        -webkit-filter: hue-rotate(180deg);
+        -moz-filter: hue-rotate(180deg);
+        -o-filter: hue-rotate(180deg);
+        -ms-filter: hue-rotate(180deg);
+        filter: hue-rotate(180deg);
+        }
+        /* filter to apply filter on video at 270 deg */
+        .hue-rotate3 {
+        -webkit-filter: hue-rotate(270deg);
+        -moz-filter: hue-rotate(270deg);
+        -o-filter: hue-rotate(270deg);
+        -ms-filter: hue-rotate(270deg);
+        filter: hue-rotate(270deg);
+        }
+
+        /* another filter */
+        .saturate {
+        -webkit-filter: saturate(10);
+        -moz-filter: saturate(10);
+        -o-filter: saturate(10);
+        -ms-filter: saturate(10);
+        filter: saturate(10);
+        }
+        /* filter   */
+        .grayscale {
+        -webkit-filter: grayscale(1);
+        -moz-filter: grayscale(1);
+        -o-filter: grayscale(1);
+        -ms-filter: grayscale(1);
+        filter: grayscale(1);
+        }
+        /* filter */
+        .sepia {
+        -webkit-filter: sepia(1);
+        -moz-filter: sepia(1);
+        -o-filter: sepia(1);
+        -ms-filter: sepia(1);
+        filter: sepia(1);
+        }
+        /* filter */
+        .invert {
+            /* webkit stands for google moz stands for mozilla o stands for opera ms stands for internet explorer */
+            /* invert is another filter */
+        -webkit-filter: invert(1);
+        -moz-filter: invert(1);
+        -o-filter: invert(1);
+        -ms-filter: invert(1);
+        filter: invert(1);
+        }
+    </style>
+
+
+</head>
+<body>
+    <!-- video -->
+    <!-- with all attributes  -->
+    <!-- <video width="200" height="200" id="video" controls autoplay> -->
+    <!-- more than one source tag means that if some link isn't working 
+    system will check second and then third one if second one is not working also and so on. however if none of link
+    is working p tag will be executed -->
+
+    <!-- Note: we can't use youtube video with video tag -->
+
+    <video width="300" height="300">
+        <source src=http://html5doctor.com/demos/video-canvas-magic/video.ogg  
+            type=video/ogg>
+        <source src=http://html5doctor.com/demos/video-canvas-magic/video.mp4 
+            type=video/mp4>
+        <source src="http://html5doctor.com/demos/video-canvas-magic/video.webm" 
+            type="type/webm">
+        <p> This video is not supported by </p>
+    </video>
+    <video width="200" height="200" id="video">
+        <source src="https://d14pr3cu5atb0x.cloudfront.net/cms/business-video-maker-for-marketing-videos-landscape-c9e37187b1.mp4" type="video/mp4">
+        <source src="https://d14pr3cu5atb0x.cloudfront.net/cms/business-video-maker-for-marketing-videos-landscape-c9e37187b1.mp4" type="video/mp4">
+        <source src="https://d14pr3cu5atb0x.cloudfront.net/cms/business-video-maker-for-marketing-videos-landscape-c9e37187b1.mp4" type="video/mp4">
+        <source src="https://d14pr3cu5atb0x.cloudfront.net/cms/business-video-maker-for-marketing-videos-landscape-c9e37187b1.mp4" type="video/mp4">
+        <source src="https://d14pr3cu5atb0x.cloudfront.net/cms/business-video-maker-for-marketing-videos-landscape-c9e37187b1.mp4" type="video/mp4">
+        <source src="https://d14pr3cu5atb0x.cloudfront.net/cms/business-video-maker-for-marketing-videos-landscape-c9e37187b1.mp4" type="video/mp4">
+        <source src="https://d14pr3cu5atb0x.cloudfront.net/cms/business-video-maker-for-marketing-videos-landscape-c9e37187b1.mp4" type="video/mp4">
+        <source src="https://d14pr3cu5atb0x.cloudfront.net/cms/business-video-maker-for-marketing-videos-landscape-c9e37187b1.mp4" type="video/mp4">
+        <source src="https://d14pr3cu5atb0x.cloudfront.net/cms/business-video-maker-for-marketing-videos-landscape-c9e37187b1.mp4" type="video/mp4">
+        <p>Your user agent does not support the HTML5 Video element.</p>
+    </video>
+
+
+    <video id="video01" controls="controls">
+
+    </video>
+    <hr>
+    <section class="h3 text-center">
+        watch the complete video to see a alert box at the end of video.
+    </section>
+    <hr>
+    
+    <div class="container mb-3" >
+        <div class="row">
+            <div class="col-12">
+                <!-- it reload the video and start from very start -->
+                <button type="button" class="btn btn-primary" onclick="getVideo().load()">load()</button>
+                <!-- it play the video -->
+                <button type="button" class="btn btn-primary" onclick="getVideo().play()">play()</button>
+                <!-- it pause the video if it is already playing -->
+                <button type="button" class="btn btn-primary" onclick="getVideo().pause()">pause()</button>
+                <!-- it moves the video forward -->
+                <button type="button" class="btn btn-primary" onclick="getVideo().currentTime+=10">currentTime+=10</button>
+                <!-- it moves the video backward -->
+                <button type="button" class="btn btn-primary" onclick="getVideo().currentTime-=10">currentTime-=10</button>
+                <!-- it moves the video at specific point -->
+                <button type="button" class="btn btn-primary" onclick="getVideo().currentTime=50">currentTime=50</button>
+                <!-- it increases the speed of video -->
+                <button type="button" class="btn btn-primary" onclick="getVideo().playbackRate++">playbackRate++</button>
+            </div>
+            <div class="col-12 mt-4">
+                <!-- it decrease the speed of video -->
+                <button type="button" class="btn btn-primary" onclick="getVideo().playbackRate--">playbackRate--</button>
+                <!-- incarese the speed of video -->
+                <button type="button" class="btn btn-secondary" onclick="getVideo().playbackRate+=0.1">playbackRate+=0.1</button>
+                <!-- decrease the speed of video -->
+                <button type="button" class="btn btn-secondary" onclick="getVideo().playbackRate-=0.1">playbackRate-=0.1</button>
+                <!-- increase the volume minimum video is 0 and max value is less than 1. if the value is increase -->
+                <!-- from 1 it will arise an error -->
+                <button type="button" class="btn btn-secondary" onclick="getVideo().volume+=0.1">volume+=0.1</button>
+                <!-- decrease the volume -->
+                <button type="button" class="btn btn-secondary" onclick="getVideo().volume-=0.1">volume-=0.1</button>
+                <!-- muted the video -->
+                <button type="button" class="btn btn-primary" onclick="getVideo().muted=true">muted=true</button>
+                <!-- unmute the video -->
+                <button type="button" class="btn btn-info" onclick="getVideo().muted=false">muted=false</button>
+                
+            </div>
+        </div>
+    </div>
+
+    
+
+    <script src="script.js"></script>
+    <script src="scripts/popper.min.js"></script>
+    <script src="scripts/jquery.min.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+    <!-- <script src="scripts/play_next_video.js"></script> -->
+    <!-- <script src="scripts/play_video_in_playlist.js"></script> -->
+    <!-- <script src="scripts/video.js"></script> -->
+    <!-- <script src="scripts/change_color_video.js"></script> -->
+    <!-- <script src="scripts/video_buffering.js"></script> -->
+    <script>
+        // console.log(x);
+    </script>
+</body>
+</html>
